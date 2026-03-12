@@ -4,12 +4,15 @@ using namespace std;
 int arr[20];
 int n;
 
-void input (){
-    while (true){
+void input ()
+{
+    while (true)
+    {
         cout << "Masukan Jumlah Data Pada Array : ";
         cin >> n;
 
-        if (n <= 20){
+        if (n <= 20)
+        {
             break;
         }
         else{
@@ -17,11 +20,12 @@ void input (){
         }
     }
     cout << endl;
-    cout << "=========================================";
-    cout << "==========Masukan Element Array==========";
-    cout << "=========================================";
+    cout << "=============================================";
+    cout << "==========Masukan Element Array==============";
+    cout << "=============================================" << endl;
 
-    for (int i = 0; i < n; i++ ){
+    for (int i = 0; i < n; i++ )
+    {
         cout << "Data ke-" << (i+1) << ": ";
         cin >> arr[i];
     }
@@ -50,3 +54,24 @@ void insertionsort()
     }
 }
 
+void display()
+{
+    cout << endl;
+    cout << "\n================";
+    cout << "\nElement Array" << endl;
+    cout << "\n================";
+
+    for(int j = 0; j < n; j++)
+    {
+        cout << arr[j] << endl;
+    }
+    cout << endl;
+}
+
+int main()
+{
+    input();
+    insertionsort();
+    display();
+    system("pause");
+}
